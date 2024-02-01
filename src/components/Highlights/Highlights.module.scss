@@ -1,0 +1,136 @@
+@use "../../styles/mixins.scss";
+
+.container {
+  @include mixins.container;
+  overflow: hidden;
+  margin-top: 20px;
+  .sliderItem {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    &[is-shown="false"] {
+      display: none;
+    }
+    @media (max-width: 850px) {
+      flex-direction: column;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 85px;
+      gap: 30px;
+      @media (max-width: 850px) {
+        align-items: center;
+        margin: 25px 0;
+      }
+
+      .category {
+        font-size: 20px;
+        font-family: Poppins-Bold;
+        @media (max-width: 1100px) {
+          font-size: 15px;
+        }
+      }
+      .title {
+        font-family: Volkhov;
+        font-size: 75px;
+        color: #181e4b;
+        height: 193px;
+        overflow: hidden;
+        @media (max-width: 1100px) {
+          font-size: 40px;
+          height: 52px;
+          width: 395px;
+        }
+        @media (max-width: 850px) {
+          font-size: 30px;
+          height: 40px;
+          text-align: center;
+        }
+      }
+      .brief {
+        font-size: 16px;
+        font-family: Poppins-Medium;
+        color: #5e6282;
+        height: 75px;
+        max-width: 450px;
+        @media (max-width: 1100px) {
+          font-size: 12px;
+        }
+        @media (max-width: 850px) {
+          text-align: center;
+        }
+      }
+      .circlesHolder {
+        position: relative;
+        @include mixins.alignCenter;
+        justify-content: space-between;
+        width: 353px;
+        z-index: 5;
+        &::before {
+          position: absolute;
+          content: "........................................";
+          z-index: -1;
+          font-size: 30px;
+          top: 0;
+        }
+        .circle {
+          width: 52px;
+          height: 52px;
+          background-color: red;
+          border-radius: 100%;
+          z-index: 1;
+          &[add-border="true"] {
+            border: 6px solid white;
+          }
+        }
+      }
+      .buttonsHolder {
+        @include mixins.alignCenter;
+        gap: 44px;
+
+        button {
+          font-size: 18px;
+          border-radius: 10px;
+          border: none;
+          @media (max-width: 1100px) {
+            font-size: 12px;
+          }
+        }
+        .findMore {
+          color: white;
+          background-color: #ff7c16;
+          font-family: GoogleSans;
+          padding: 19px 22px;
+        }
+        .demo {
+          background-color: white;
+          color: #686d77;
+          @include mixins.alignCenter;
+          gap: 24px;
+          padding-inline-end: 19px;
+          font-family: Poppins-Medium;
+          img {
+            width: 52px;
+            height: 52px;
+          }
+        }
+      }
+    }
+    .sliderImg {
+      width: 667px;
+      height: 610px;
+
+      @media (max-width: 1000px) {
+        width: 467px;
+        height: 410px;
+        margin: 0 auto;
+      }
+      @media (max-width: 450px) {
+        width: 367px;
+        height: 310px;
+      }
+    }
+  }
+}
