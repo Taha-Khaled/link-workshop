@@ -1,15 +1,13 @@
 import "./App.scss";
 import Footer from "./components/Footer";
-import Highlights from "./components/Highlights";
+import Header from "./components/Header";
 import LatestNews from "./components/LatestNews";
-import Navbar from "./components/Navbar";
 import ThingsWeDo from "./components/ThingsWeDo";
 
 function App() {
   return (
     <main>
-      <Navbar />
-      <Highlights />
+      <Header />
       <ThingsWeDo />
       <LatestNews />
       <Footer />

@@ -8,3 +8,13 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin container {
+  padding-inline: 140px;
+  @media (max-width: 1150px) {
+    padding-inline: 30px;
+  }
+  @media (max-width: 800px) {
+    padding-inline: 0;
+  }
+}

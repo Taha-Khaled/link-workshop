@@ -1,4 +1,8 @@
 const ThingsWeDo = () => {
-  return <section>ThingsWeDo</section>;
+  return (
+    <section>
+      <div>ThingsWeDo</div>
+    </section>
+  );
 };
 export default ThingsWeDo;

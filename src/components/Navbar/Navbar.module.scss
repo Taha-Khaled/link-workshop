@@ -3,8 +3,9 @@
 .container {
   padding-top: 22px;
   @include mixins.alignCenter;
+  @include mixins.container;
   justify-content: space-between;
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     flex-direction: column;
     gap: 10px;
   }
