@@ -1,0 +1,40 @@
+@use "../../styles/mixins.scss";
+
+.container {
+  padding-top: 22px;
+  @include mixins.alignCenter;
+  justify-content: space-between;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .logoHolder {
+    img {
+      width: 190px;
+      height: 72px;
+    }
+  }
+  .list {
+    @include mixins.alignCenter;
+    gap: 30px;
+    .signUpBtn {
+      background-color: transparent;
+      padding: 10px 22px;
+      border-radius: 5px;
+      border: 1px solid #212832;
+    }
+    .langBtn {
+      @include mixins.alignCenter;
+      gap: 5px;
+      border: none;
+      background-color: transparent;
+    }
+    li,
+    button {
+      cursor: pointer;
+      font-size: 17px;
+      font-family: GoogleSans;
+      text-align: center;
+    }
+  }
+}

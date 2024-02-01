@@ -1,4 +1,4 @@
-import styles from "./App.module.scss";
+import "./App.scss";
 import Footer from "./components/Footer";
 import Highlights from "./components/Highlights";
 import LatestNews from "./components/LatestNews";
@@ -7,7 +7,7 @@ import ThingsWeDo from "./components/ThingsWeDo";
 
 function App() {
   return (
-    <main className={styles.app}>
+    <main>
       <Navbar />
       <Highlights />
       <ThingsWeDo />

@@ -1,0 +1,12 @@
+.container {
+  padding-inline: 140px;
+  @media (max-width: 1100px) {
+    padding-inline: 30px;
+  }
+  @media (max-width: 800px) {
+    padding-inline: 0;
+  }
+}
+li {
+  list-style-type: none;
+}
