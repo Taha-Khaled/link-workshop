@@ -23,7 +23,9 @@
         align-items: center;
         margin: 25px 0;
       }
-
+      @media (max-width: 1000px) {
+        margin-top: 30px;
+      }
       .category {
         font-size: 20px;
         font-family: Poppins-Bold;
@@ -89,7 +91,9 @@
       .buttonsHolder {
         @include mixins.alignCenter;
         gap: 44px;
-
+        @media (max-width: 400px) {
+          gap: 15px;
+        }
         button {
           font-size: 18px;
           border-radius: 10px;
@@ -122,11 +126,11 @@
     .sliderImg {
       width: 667px;
       height: 610px;
-
+      margin-top: 30px;
       @media (max-width: 1000px) {
         width: 467px;
         height: 410px;
-        margin: 0 auto;
+        margin: 30px auto 0;
       }
       @media (max-width: 450px) {
         width: 367px;

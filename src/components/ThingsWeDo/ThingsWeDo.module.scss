@@ -1,0 +1,122 @@
+.container {
+  padding: 70px 0;
+  position: relative;
+  background-color: #efefef;
+  z-index: 0;
+  overflow: hidden;
+  .bgText {
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: -135px;
+    font-size: 180px;
+    line-height: 140px;
+    width: 663px;
+    font-family: "Poppins-Bold";
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #d9d9d9;
+  }
+  .content {
+    display: flex;
+    @media (max-width: 1250px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cardHolder {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      height: fit-content;
+      width: fit-content;
+
+      @media (min-width: 750px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        margin-bottom: 125px;
+        padding-inline-start: 70px;
+        &::before {
+          content: "";
+        }
+        div:nth-of-type(1) {
+          order: 3;
+          &:hover {
+            img,
+            &::after {
+              transform: translateY(10px);
+              transition: transform 500ms ease-in-out;
+            }
+          }
+        }
+        div:nth-of-type(2) {
+          order: 1;
+          transform: translateY(125px);
+        }
+        div:nth-of-type(3) {
+          order: 4;
+          transform: translateY(125px);
+        }
+        div:nth-of-type(4) {
+          order: 2;
+        }
+        div:nth-of-type(5) {
+          order: 5;
+        }
+      }
+    }
+    .infoHolder {
+      margin-top: 30px;
+      position: relative;
+      .bgShape {
+        position: absolute;
+        width: calc(100% + 350px);
+        height: 100%;
+        right: 0;
+        background-color: #f215b6;
+        clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+        z-index: -3;
+      }
+      .info {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 53px;
+        align-items: center;
+        text-align: right;
+        h1 {
+          color: #253776;
+          font-size: 55px;
+          line-height: 80px;
+          font-family: Poppins-Bold;
+        }
+        p {
+          font-family: OpenSans;
+          font-size: 28px;
+          color: white;
+          height: 200px;
+          overflow: hidden;
+        }
+        @media (max-width: 1250px) {
+          text-align: center;
+          p {
+            height: fit-content;
+          }
+        }
+        @media (max-width: 400px) {
+          gap: 20px;
+          h1 {
+            font-size: 30px;
+            line-height: normal;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
