@@ -3,7 +3,7 @@ export interface solutionsType {
   title: string;
   brief: string;
 }
-interface ItemsEntity {
+export interface ItemsEntity {
   id: string;
   title: string;
   imgUrl: string;
