@@ -1,7 +1,7 @@
 export interface SlidesType {
-  slides: SlideType[];
+  slides: SlidesEntity[];
 }
-export interface SlideType {
+export interface SlidesEntity {
   id: string;
   brief: string;
   order: number;
