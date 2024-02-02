@@ -1,5 +1,11 @@
 import styles from "./Highlights.module.scss";
-import { Dispatch, FunctionComponent, SetStateAction, useState } from "react";
+import {
+  Dispatch,
+  FunctionComponent,
+  SetStateAction,
+  memo,
+  useState,
+} from "react";
 import { SlidesType } from "../../types/slidesType";
 
 interface HighlightsProps extends SlidesType {
@@ -11,7 +17,17 @@ const Highlights: FunctionComponent<HighlightsProps> = ({
   setShapeColor,
 }) => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const CircleHolder = () => {
+  const handelSlideIndex = () => {
+    if (slideIndex === slides.length - 1) {
+      setSlideIndex(0);
+      setShapeColor(slides[0].colorCode);
+    } else {
+      setSlideIndex(slideIndex + 1);
+      setShapeColor(slides[slideIndex + 1].colorCode);
+    }
+  };
+
+  const CircleHolder = memo(() => {
     return (
       <div className={styles.circlesHolder}>
         {slides?.map((slide) => (
@@ -28,16 +44,7 @@ const Highlights: FunctionComponent<HighlightsProps> = ({
         ))}
       </div>
     );
-  };
-  const handelSlideIndex = () => {
-    if (slideIndex === slides.length - 1) {
-      setSlideIndex(0);
-      setShapeColor(slides[0].colorCode);
-    } else {
-      setSlideIndex(slideIndex + 1);
-      setShapeColor(slides[slideIndex + 1].colorCode);
-    }
-  };
+  });
   return (
     <div>
       <section
