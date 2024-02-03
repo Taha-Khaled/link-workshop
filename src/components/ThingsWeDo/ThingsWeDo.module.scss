@@ -1,3 +1,5 @@
+@use "../../styles/mixins";
+
 .container {
   padding: 70px 0;
   position: relative;
@@ -20,14 +22,11 @@
     display: flex;
     @media (max-width: 1250px) {
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include mixins.center;
     }
     .cardHolder {
-      display: flex;
+      @include mixins.center;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
       gap: 15px;
       height: fit-content;
       width: fit-content;
@@ -81,11 +80,10 @@
         z-index: -3;
       }
       .info {
+        @include mixins.alignCenter;
         padding: 50px;
-        display: flex;
         flex-direction: column;
         gap: 53px;
-        align-items: center;
         text-align: right;
         h1 {
           color: #253776;

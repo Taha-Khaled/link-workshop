@@ -1,4 +1,3 @@
-import "./App.scss";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import LatestNews from "./components/LatestNews";
