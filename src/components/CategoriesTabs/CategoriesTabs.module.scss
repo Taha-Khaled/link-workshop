@@ -1,0 +1,27 @@
+@use "../../styles/mixins.scss";
+.categoriesHolder {
+  @include mixins.center;
+  padding: 30px 0;
+  gap: 15px 30px;
+  flex-wrap: wrap;
+  .category {
+    padding: 10px 0;
+    width: 123px;
+    text-align: center;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    cursor: pointer;
+    &[is-selected="true"] {
+      background-color: #0eceff;
+      h3 {
+        color: white;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 22px;
+      font-family: GoogleSans;
+      color: #0f526e;
+    }
+  }
+}
