@@ -34,11 +34,7 @@ const Highlights: FunctionComponent<HighlightsProps> = ({
           <div
             className={styles.circle}
             key={slide.id}
-            add-border={
-              slide?.colorCode === slides[slideIndex]?.colorCode
-                ? "false"
-                : "true"
-            }
+            add-border={`${slide?.colorCode !== slides[slideIndex]?.colorCode}`}
             style={{ backgroundColor: slide.colorCode }}
           />
         ))}
