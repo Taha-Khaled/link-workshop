@@ -12,12 +12,10 @@ const NewsList: FunctionComponent<NewsListProps> = ({ news }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.newsListHolder}>
-        <div className={styles.newsList}>
-          {news?.slice(0, viewAllNews ? news.length : 6)?.map((item) => (
-            <NewsCard key={item.id} {...item} />
-          ))}
-        </div>
+      <div className={styles.newsList}>
+        {news?.slice(0, viewAllNews ? news.length : 6)?.map((item) => (
+          <NewsCard key={item.id} {...item} />
+        ))}
       </div>
       {news?.length === 0 ? (
         <h2 className={styles.noNews}>No Related News</h2>

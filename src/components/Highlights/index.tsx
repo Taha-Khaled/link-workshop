@@ -82,4 +82,4 @@ const Highlights: FunctionComponent<HighlightsProps> = ({
     </div>
   );
 };
-export default Highlights;
+export default memo(Highlights);

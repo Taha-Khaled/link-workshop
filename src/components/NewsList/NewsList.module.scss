@@ -1,14 +1,19 @@
 @use "../../styles/mixins.scss";
 
 .container {
-  .newsListHolder {
-    width: 100%;
-    @include mixins.center;
-    .newsList {
-      @include mixins.alignCenter;
-      flex-wrap: wrap;
-      gap: 50px 40px;
-      width: 1170px;
+  .newsList {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    justify-content: center;
+    gap: 50px 40px;
+    @media (max-width: 1170px) {
+      grid-template-columns: repeat(2, 360px);
+    }
+    @media (max-width: 770px) {
+      grid-template-columns: repeat(1, 360px);
+    }
+    @media (max-width: 400px) {
+      grid-template-columns: repeat(1, 300px);
     }
   }
   .viewAllNews {
