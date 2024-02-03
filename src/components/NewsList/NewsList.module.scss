@@ -1,0 +1,33 @@
+@use "../../styles/mixins.scss";
+
+.container {
+  .newsListHolder {
+    width: 100%;
+    @include mixins.center;
+    .newsList {
+      @include mixins.alignCenter;
+      flex-wrap: wrap;
+      gap: 50px 40px;
+      width: 1170px;
+    }
+  }
+  .viewAllNews {
+    text-align: center;
+    padding-top: 50px;
+    button {
+      width: 266px;
+      background-color: #ff7c16;
+      color: white;
+      padding: 20px 0;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .noNews {
+    @include mixins.center;
+    margin: 0 auto;
+    padding: 30px 0;
+    height: 530px;
+  }
+}
