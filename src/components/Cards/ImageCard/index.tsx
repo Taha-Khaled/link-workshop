@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, memo } from "react";
 import styles from "./ImageCard.module.scss";
 import RightArrow from "../../../icons/RightArrow";
 interface ImageCardProps {
@@ -23,4 +23,4 @@ const ImageCard: FunctionComponent<ImageCardProps> = ({
     </div>
   );
 };
-export default ImageCard;
+export default memo(ImageCard);

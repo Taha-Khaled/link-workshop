@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, memo } from "react";
 import { NewsEntity } from "../../../types/newsType";
 import styles from "./NewsCard.module.scss";
 import DateIcon from "../../../icons/DateIcon";
@@ -43,4 +43,4 @@ const NewsCard: FunctionComponent<NewsCardProps> = ({
     </div>
   );
 };
-export default NewsCard;
+export default memo(NewsCard);
