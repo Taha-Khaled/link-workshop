@@ -46,6 +46,9 @@
             line-height: 22px;
             font-family: Poppins-Medium;
             cursor: pointer;
+            &:hover {
+              color: #0eceff;
+            }
           }
         }
       }

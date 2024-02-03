@@ -23,12 +23,22 @@
       padding: 10px 22px;
       border-radius: 5px;
       border: 1px solid #212832;
+      &:hover {
+        border: 1px solid #0eceff;
+      }
     }
     .langBtn {
       @include mixins.alignCenter;
       gap: 5px;
       border: none;
       background-color: transparent;
+      &:hover {
+        svg {
+          path {
+            stroke: #0eceff;
+          }
+        }
+      }
     }
     li,
     button {
@@ -36,6 +46,9 @@
       font-size: 17px;
       font-family: GoogleSans;
       text-align: center;
+      &:hover {
+        color: #0eceff;
+      }
     }
   }
 }
