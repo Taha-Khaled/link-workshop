@@ -1,9 +1,14 @@
+import { FunctionComponent } from "react";
 import { useSolutions } from "../../hooks/useSolutions";
 import ImageCard from "../Cards/ImageCard";
+import Loader from "../Loader";
 import styles from "./ThingsWeDo.module.scss";
-const ThingsWeDo = () => {
-  const { data } = useSolutions();
-  console.log(data);
+
+const ThingsWeDo: FunctionComponent = () => {
+  const { data, isLoading } = useSolutions();
+
+  if (isLoading) return <Loader fullPage />;
+
   return (
     <section className={styles.container}>
       <h2 className={styles.bgText}>Things We Do</h2>
