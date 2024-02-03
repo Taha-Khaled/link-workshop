@@ -1,0 +1,114 @@
+@use "../../styles/mixins";
+
+.footer {
+  @include mixins.container;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 915px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .info {
+      width: 210px;
+      .brief {
+        font-size: 13px;
+        line-height: 16px;
+        font-family: Poppins-Medium;
+        margin-top: 17px;
+        color: #5e6282;
+      }
+    }
+
+    .listHolder {
+      display: grid;
+      gap: 20px 80px;
+      grid-template-columns: repeat(3, fit-content(100%));
+      @media (max-width: 500px) {
+        grid-template-columns: repeat(2, fit-content(100%));
+      }
+      .list {
+        h2 {
+          font-size: 21px;
+          font-family: Poppins-Bold;
+          line-height: 26px;
+          margin-bottom: 34px;
+          color: #080809;
+        }
+        .links {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          li {
+            font-size: 18px;
+            color: #5e6282;
+            line-height: 22px;
+            font-family: Poppins-Medium;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .social {
+      @media (max-width: 915px) {
+        @include mixins.center;
+        flex-direction: column;
+      }
+      width: 215px;
+      .socialIcons {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 25px;
+        cursor: pointer;
+        .socialIcon {
+          @include mixins.center;
+          width: 41px;
+          height: 41px;
+          background-color: white;
+          box-shadow: 0px 5px 16px -3px rgba(0, 0, 0, 0.15);
+          -webkit-box-shadow: 0px 5px 16px -3px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0px 5px 16px -3px rgba(0, 0, 0, 0.15);
+          border-radius: 100%;
+        }
+      }
+      h3 {
+        margin-bottom: 16px;
+        font-size: 20px;
+        font-family: Poppins-Medium;
+        color: #5e6282;
+        line-height: 24px;
+      }
+      .buttons {
+        display: flex;
+        gap: 7px;
+        button {
+          @include mixins.alignCenter;
+          background-color: #080809;
+          color: white;
+          border: none;
+          border-radius: 17.5px;
+          height: 35px;
+          gap: 6px;
+          padding: 0 15px;
+          cursor: pointer;
+          p {
+            font-size: 7px;
+            text-transform: uppercase;
+            text-align: left;
+            font-family: Poppins-Regular;
+          }
+        }
+      }
+    }
+  }
+  .rights {
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5e6282;
+    font-family: Poppins-Medium;
+    margin: 40px 0 54px;
+  }
+}

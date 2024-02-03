@@ -3,17 +3,14 @@
 .container {
   .newsList {
     display: grid;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(3, fit-content(100%));
     justify-content: center;
     gap: 50px 40px;
     @media (max-width: 1170px) {
-      grid-template-columns: repeat(2, 360px);
+      grid-template-columns: repeat(2, fit-content(100%));
     }
     @media (max-width: 770px) {
-      grid-template-columns: repeat(1, 360px);
-    }
-    @media (max-width: 400px) {
-      grid-template-columns: repeat(1, 300px);
+      grid-template-columns: repeat(1, fit-content(100%));
     }
   }
   .viewAllNews {
