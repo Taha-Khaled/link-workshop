@@ -1,0 +1,29 @@
+@use "../../styles/mixins.scss";
+
+.container {
+  position: relative;
+  padding: 30px 20px 50px;
+  overflow: hidden;
+  .backgroundCircles {
+    position: absolute;
+    right: -70px;
+    z-index: -1;
+  }
+
+  .headline {
+    text-align: center;
+    h3 {
+      font-family: Poppins-SemiBold;
+      font-size: 18px;
+      line-height: 27px;
+      color: #5e6282;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: Volkhov;
+      font-size: 50px;
+      line-height: 65px;
+      color: #14183e;
+    }
+  }
+}
